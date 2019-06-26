@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
 }
+
 @font-face {
     font-family: 'Pixel';
     src: url("../fonts/Pixel.ttf");
@@ -8,7 +9,7 @@
 
 [wm-flappy] {
     position: relative;
-    border:5px solid dodgerblue;
+    border: 5px solid dodgerblue;
     height: 700px;
     width: 1200px;
     margin: 15px;
@@ -17,6 +18,7 @@
 }
 
 /* Pocisionamento do passaro */
+
 .passaro {
     position: absolute;
     width: 60px;
@@ -24,6 +26,7 @@
 }
 
 /* */
+
 .par-de-barreiras {
     position: absolute;
     top: 0;
@@ -61,4 +64,52 @@
     font-family: 'Pixel';
     font-size: 70pt;
     z-index: 100;
+}
+
+@media only screen and (max-width: 800px) {
+    [wm-flappy] {
+        position: relative;
+        border: 5px solid dodgerblue;
+        height: 750px;
+        width: 800px;
+        margin: 10px;
+        background-color: deepskyblue;
+        overflow: hidden;
+    }
+    /* Pocisionamento do passaro */
+    .passaro {
+        position: absolute;
+        width: 45px;
+        left: calc(50% - 30px);
+    }
+    /* */
+    .par-de-barreiras {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .progresso {
+        position: absolute;
+        top: -10px;
+        right: 30%;
+        font-family: 'Pixel';
+        font-size: 70pt;
+        z-index: 100;
+    }
+    .barreira .borda {
+        height: 30px;
+        width: 95px;
+        background: linear-gradient(90deg, #639301, #a5e82e);
+        border: 2px solid #000000
+    }
+    .barreira .corpo {
+        height: 150px;
+        width: 80px;
+        background: linear-gradient(90deg, #639301, #a5e82e);
+        border-left: 2px solid #000000;
+        border-right: 2px solid #000000;
+    }
 }

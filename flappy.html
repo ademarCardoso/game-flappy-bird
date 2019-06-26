@@ -6,13 +6,19 @@
     <title>Flappy Bird</title>
     <link rel="stylesheet" href="css/estilo.css">
     <link rel="stylesheet" href="css/flappy.css">
+    <link rel="stylesheet" href="css/menu.css">
 </head>
 
 <body class="conteudo">
     <h1>Flappy Bird</h1>
     <div wm-flappy>
-        
+        <div id="init-game" class=" "><button class="btn-init" onclick="show()">Iniciar</button></div>
+        <div id="end-game" class="end-game ">
+            Voce perdeu!
+            <button class="btn-res" onclick="init()">Reiniciar</button>
+        </div>
     </div>
+    <h3>Desenvolvido por @Ademar</h3>
     <script src="js/flappy.js"></script>
 </body>
 

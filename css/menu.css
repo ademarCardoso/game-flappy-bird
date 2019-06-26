@@ -1,34 +1,53 @@
-body {
-    background-color: lightgray;
+@font-face {
+    font-family: 'Oswald';
+    src: url('../fonts/Oswald-Regular.ttf') format('truetype');
 }
 
-.menu-principal {
-    min-width: 500px;
+#init-game {
+    width: 350px;
+    height: 150px;
+    /* color: brown; */
+    position: absolute;
+    top: 40%;
+    right: 40%;
+    font-family: 'Pixel';
+    font-size: 70pt;
+    z-index: 100;
     text-align: center;
+    background-color: black;
 }
 
-.menu-principal h1 {
-    background: #333;
-    color: #fff;
-    border-bottom: solid 5px #4faddb;
-    padding: 15px 0px;
-    margin: 0;
+.btn-init {
+    background-color: brown;
 }
 
-.menu-principal nav {
-    display: inline-block;
-    background-color: #fff;
-    min-width: 248px;
+.init-disable {
+    display: none;
 }
 
-.menu-principal a {
+.end-game {
+    display: none;
+}
+
+.end-restart {
+    border-radius: 5px;
     display: block;
-    padding: 10px 0px;
-    text-decoration: none;
-    color: #222;
-    font-size: 1.2em;
+    z-index: 100;
+    width: 350px;
+    height: 200px;
+    /* color: brown; */
+    position: absolute;
+    top: 40%;
+    right: 40%;
+    font-family: 'Oswald';
+    font-size: 50pt;
+    z-index: 100;
+    text-align: center;
+    background-color: black;
 }
 
-.menu-principal a:hover {
-    background-color: rgba(79, 173, 219, .4);
+.btn-res {
+    margin: 0;
+    width: 150px;
+    height: 40px;
 }

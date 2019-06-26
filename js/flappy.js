@@ -15,10 +15,6 @@ function Barreira (reverse = false) {
     this.setAltura = altura => corpo.style.height = `${altura}px`
 }
 
-//const b = new barreira(true)
-///b.setAltura(200)
-//document.querySelector('[wm-flappy]').appendChild(b.elemento)
-
 function parDeBarreiras(altura, abertura, x) {
     this.elemento = novoElemento('div', 'par-de-barreiras')
 
@@ -42,9 +38,6 @@ function parDeBarreiras(altura, abertura, x) {
     this.sortAbertura()
     this.setX(x)
 }
-
-//const b = new parDeBarreiras(700, 200, 400)
-//document.querySelector('[wm-flappy]').appendChild(b.elemento)
 
  function Barreiras(altura, largura, abertura, espaco, notificarPonto) {
      this.pares = [
@@ -104,17 +97,6 @@ function parDeBarreiras(altura, abertura, x) {
 
  }
 
- //const barreiras = new Barreiras(700, 1200, 200, 400)
- //const passaro = new Passaro(700)
- //const areaDoJogo = document.querySelector('[wm-flappy]')
-
- //areaDoJogo.appendChild(passaro.elemento)
- //barreiras.pares.forEach(par => areaDoJogo.appendChild(par.elemento))
- //setInterval(() => {
- //    barreiras.animar()
- //    passaro.animar()
- //}, 20)
-
  function Progresso() {
     this.elemento = novoElemento('span', 'progresso')
     this.atualizarPontos = pontos => {
@@ -122,18 +104,6 @@ function parDeBarreiras(altura, abertura, x) {
     }    
     this.atualizarPontos(0)
 }
-
-//const barreiras = new Barreiras(700, 1200, 200, 400)
-//const passaro = new Passaro(700)
-//const areaDoJogo = document.querySelector('[wm-flappy]')
-
-//areaDoJogo.appendChild(passaro.elemento)
-//areaDoJogo.appendChild(new Progresso().elemento)
-//barreiras.pares.forEach(par => areaDoJogo.appendChild(par.elemento))
-//setInterval(() => {
-//    barreiras.animar()
-//    passaro.animar()
-// }, 20)
 
 function estaoSobrepostos (elementoA, elementoB) {
     const a = elementoA.getBoundingClientRect()
@@ -186,10 +156,21 @@ function FlappyBird() {
             passaro.animar()
 
             if(colidiu(passaro, barreiras)) {
+                restart()
                 clearInterval(temporizador)
             }
         }, 20)
     }
 }
+function show () {
+    document.getElementById('init-game').classList.add('init-disable')
+        new FlappyBird().start()
+}
 
-new FlappyBird().start()
+function restart () {
+    document.getElementById('end-game').classList.add('end-restart')
+}
+
+// function init() {
+//     new FlappyBird().start()
+// }
