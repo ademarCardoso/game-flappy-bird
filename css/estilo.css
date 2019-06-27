@@ -53,3 +53,12 @@ body {
     color: greenyellow;
     font-weight: bold;
 }
+
+#link {
+    text-decoration: none;
+    color: white;
+}
+
+#link i {
+    color: dodgerblue;
+}

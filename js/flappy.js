@@ -1,6 +1,8 @@
 function novoElemento(tagName, className) {
     const elem = document.createElement(tagName)
+    elem.id = document.createAttribute('id')
     elem.className = className
+    elem.id = className
     return elem
 }
 
@@ -156,7 +158,7 @@ function FlappyBird() {
             passaro.animar()
 
             if(colidiu(passaro, barreiras)) {
-                restart()
+                document.getElementById('end-game').classList.add('end-restart')
                 clearInterval(temporizador)
             }
         }, 20)
@@ -167,10 +169,10 @@ function show () {
         new FlappyBird().start()
 }
 
-function restart () {
-    document.getElementById('end-game').classList.add('end-restart')
+function init() {
+    window.location.reload()
+    // let esconder = document.getElementById('par-de-barreiras')
+    // esconder.style.left = '1400px'
+    // new FlappyBird().start()
+    // document.getElementById('end-game').classList.remove('end-restart')
 }
-
-// function init() {
-//     new FlappyBird().start()
-// }

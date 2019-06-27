@@ -6,19 +6,24 @@
 #init-game {
     width: 350px;
     height: 150px;
-    /* color: brown; */
     position: absolute;
     top: 40%;
     right: 40%;
     font-family: 'Pixel';
-    font-size: 70pt;
     z-index: 100;
     text-align: center;
-    background-color: black;
+    background-color: dodgerblue;
+    border-radius: 10px;
 }
 
 .btn-init {
-    background-color: brown;
+    border: none;
+    border-radius: 5px;
+    font-size: 55pt;
+    background-color: dodgerblue;
+    margin: 0 auto;
+    margin-top: 5%;
+    color: white;
 }
 
 .init-disable {
@@ -27,6 +32,14 @@
 
 .end-game {
     display: none;
+}
+
+.karalho {
+    left: 1400px;
+}
+
+.game-restart {
+    display: block;
 }
 
 .end-restart {
@@ -43,11 +56,15 @@
     font-size: 50pt;
     z-index: 100;
     text-align: center;
-    background-color: black;
+    background-color: dodgerblue;
 }
 
 .btn-res {
+    background-color: dodgerblue;
     margin: 0;
-    width: 150px;
-    height: 40px;
+    width: 350px;
+    height: 100px;
+    border: none;
+    color: white;
+    font-size: 50pt;
 }
