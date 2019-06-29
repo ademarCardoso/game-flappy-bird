@@ -48,7 +48,6 @@
     z-index: 100;
     width: 350px;
     height: 200px;
-    /* color: brown; */
     position: absolute;
     top: 40%;
     right: 40%;
@@ -67,4 +66,26 @@
     border: none;
     color: white;
     font-size: 50pt;
+}
+
+@media (max-width: 800px) {
+    #init-game {
+        width: 200px;
+        height: 130px;
+        position: absolute;
+        top: 40%;
+        left: 37%;
+    }
+    .end-restart {
+        width: 200px;
+        height: 130px;
+        top: 40%;
+        left: 37%;
+        font-size: 25pt;
+    }
+    .btn-res {
+        font-size: 20pt;
+        height: 50px;
+        width: 100px;
+    }
 }
